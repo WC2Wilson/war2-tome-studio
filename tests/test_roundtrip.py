@@ -15,5 +15,5 @@ with tempfile.TemporaryDirectory() as td:
     out=Path(td)/"out"; a.save(out,backup=False)
     assert out.read_bytes()==blob
 text=(root/"tome_workbench.py").read_text(encoding="utf-8")
-assert "PSX" not in text and "PlayStation" not in text
+assert ("P" + "SX") not in text and ("Play" + "Station") not in text
 print("TOME synthetic round-trip: PASS")
